@@ -41,18 +41,7 @@ app.post('/api', (request, response) => {
 });
 });
 
-  //   const  today = Date.now();
-    //   //api_key='c7ab8885177a89aa3c12ac7798cc8a74'
-    //   api_key=process.env.API_KEY
-    //    const weather_url=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}&units=imperial`
-    //    //const weather_url=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c7ab8885177a89aa3c12ac7798cc8a74&units=imperial`
-    //     var response=await fetch(weather_url) 
-    //   const weather_json = await response.json();
-
-
-    //   const aq_url=`https://api.openaq.org//v2/latest?coordinates=${lat},${lon}`
-    //   response=await fetch(aq_url) 
-    //   const aq_json = await response.json();
+ 
 
     app.get('/weather/:latlon', async (request, response) => {
         console.log(request.params);
@@ -61,7 +50,7 @@ app.post('/api', (request, response) => {
         const lat = latlon[0];
         const lon = latlon[1];
         console.log(lat, lon);
-           //api_key='c7ab8885177a89aa3c12ac7798cc8a74'
+     
         api_key=process.env.API_KEY
        const weather_url=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}&units=imperial`
        //const weather_url=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c7ab8885177a89aa3c12ac7798cc8a74&units=imperial`
